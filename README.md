@@ -69,6 +69,11 @@ plt.xlabel("Pixel Intensity")
 plt.ylabel("Normalized Pixel Count")
 
 plt.show()
+
+equalized_grey_img = cv2.equalizeHist(grayscale_image)
+plt.title("Equalized Hist of Gray Image")
+plt.hist(equalized_grey_img.ravel(),bins=256,color='black',alpha=0.6)
+plt.show()
 ```
 ## Output:
 ### Input Grayscale Image and Color Image
@@ -81,9 +86,11 @@ plt.show()
 
 ![image](https://github.com/user-attachments/assets/ff5babd3-0fba-4f3a-9bfb-76de126668f0)
 
+![image](https://github.com/user-attachments/assets/a3c40c0b-ff9b-4254-810f-82b2acee016b)
+
 ### Histogram Equalization of Grayscale Image.
 
-![image](https://github.com/user-attachments/assets/a3c40c0b-ff9b-4254-810f-82b2acee016b)
+![image](https://github.com/user-attachments/assets/bc0cf354-b822-4bcb-b5d8-a4348b25d79b)
 
 ## Result: 
 Thus the histogram for finding the frequency of pixels in an image with pixel values ranging from 0 to 255 is obtained. Also,histogram equalization is done for the gray scale image using OpenCV.
